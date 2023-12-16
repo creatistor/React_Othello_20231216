@@ -1,3 +1,10 @@
+# npm install
+# npm start
+※Bootstrapが入っていないのでcloneした後に[npm install react-bootstrap bootstrap]をお願いします。
+※手番やプレイヤー勝利時のalart等を省略しています。
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
