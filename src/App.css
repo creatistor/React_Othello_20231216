@@ -1,0 +1,96 @@
+/* コンポーネントは全て中央ぞろえ */
+/* 親要素で全て中央に揃える */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #111111;
+}
+
+.board-wrapper {
+  margin-top: 20vh;
+  margin-bottom: 5vh;
+  padding: 3vh 3vh;
+  background-color: #111111;
+  box-shadow: 10px 10px 5px black;
+  border-radius: 5%;
+}
+
+#board {
+  height: 59.2vh;
+  width: 59.2vh;
+  display: grid;
+  place-items: center;
+  background-color: #111111;
+}
+
+.title {
+  position: fixed;
+  top: 0;
+  font-size: 5vh;
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
+  padding: 2vh;
+  text-shadow: 10px 10px 5px black;
+}
+
+.App {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  background: url(../img/grain_bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#controller {
+  margin-bottom: 10vh;
+}
+
+/* 8つの要素と9つの間隔 */
+/* ただし隣り合う間隔は2倍になるため16間隔 */
+/* 8*squareの一辺の長さ+16*間隔=boardの一辺の長さとなるようにする */
+/* squareの一辺=7vh 間隔=0.2 boardの一辺の長さは59.2とする */
+/* ↑Bootstrap使ったら自動で何かが適応されたから無効 */
+.square {
+  margin: 0.1vh 0.1vh;
+  height: 7vh;
+  width: 7vh;
+  background-color: #075400 !important;
+  box-shadow: none !important;
+  color: #075400;
+  border: black;
+  outline: none;
+  font-size: 4.5vh !important;
+  text-align: center;
+  transition: background-color 0.4s;
+  border-radius: 3%;
+}
+
+/* 石が置かれていない部分はhoverで若干暗めの緑にする */
+.square:hover {
+  background-color: #073600 !important;
+}
+
+/* 既に石が置かれている部分はhoverしない */
+.cant-select {
+  pointer-events: none;
+}
+
+.square[data-owner="black"] {
+  color: black;
+}
+
+.square[data-owner="white"] {
+  color: white;
+}
+
+#btn-initialize {
+  box-shadow: 10px 10px 5px black;
+}
