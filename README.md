@@ -1,6 +1,7 @@
 # npm install
 # npm start
 ※Bootstrapが入っていないのでcloneした後に[npm install react-bootstrap bootstrap]をお願いします。
+
 ※手番やプレイヤー勝利時のalart等を省略しています。
 
 
